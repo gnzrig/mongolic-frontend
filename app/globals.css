@@ -25,3 +25,18 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .flex-c {
+    @apply flex flex-col;
+  }
+  .flex-r {
+    @apply flex flex-row;
+  }
+  .flex-between-center {
+    @apply flex justify-between items-center;
+  }
+  .max-w-cont {
+    @apply w-full max-w-[1504px] px-[32px] mx-auto;
+  }
+}
