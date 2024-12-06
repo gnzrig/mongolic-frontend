@@ -15,6 +15,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -23,5 +24,27 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .headerBackground {
+    @apply bg-[#272727];
+  }
+  .headerMenuBackground {
+    @apply bg-white;
+  }
+
+  .flex-c {
+    @apply flex flex-col;
+  }
+  .flex-r {
+    @apply flex flex-row;
+  }
+  .flex-between-center {
+    @apply flex justify-between items-center;
+  }
+  .max-w-container {
+    @apply w-full max-w-[1520px] md:px-8 px-4 mx-auto;
   }
 }
