@@ -29,7 +29,7 @@ export const Navbar = () => {
                 <Link href="/">Listen</Link>
               </li>
               <li className="cursor-pointer">
-                <Link href="/">Watch</Link>
+              <Link href="/watch">Watch</Link>
               </li>
               <li className="cursor-pointer">
                 <Link href="/">Discuss</Link>

@@ -4,8 +4,8 @@ import Menu from "../components/menu/Menu";
 const Base = () => {
   return (
     <div>
-      <Menu />
-      <div>Menu</div>
+      {/* <Menu />
+      <div>Mssenu</div> */}
     </div>
   );
 };
