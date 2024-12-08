@@ -44,6 +44,12 @@ body {
   .homeBannerBack {
     @apply bg-[#9f9f9f];
   }
+  .homeEpisoderBack {
+    @apply bg-[#0a0909];
+  }
+  .homeContentBack {
+    @apply bg-[#f7f7f7];
+  }
 
   .flex-c {
     @apply flex flex-col;
@@ -56,6 +62,9 @@ body {
   }
   .flex-r-center {
     @apply flex flex-row justify-center items-center;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
   }
   .flex-between-center {
     @apply flex justify-between items-center;
