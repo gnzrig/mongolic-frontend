@@ -1,4 +1,4 @@
-import Base from "./pages/page";
+import Base from "./pages/watch/page";
 
 export default function Home() {
   return (
