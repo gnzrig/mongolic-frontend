@@ -35,16 +35,35 @@ body {
     @apply bg-white;
   }
 
+  .footerBackground {
+    @apply bg-[#272727];
+  }
+  .homeBackground {
+    @apply bg-white;
+  }
+  .homeBannerBack {
+    @apply bg-[#9f9f9f];
+  }
+
   .flex-c {
     @apply flex flex-col;
   }
+  .flex-c-center {
+    @apply flex flex-col justify-center items-center;
+  }
   .flex-r {
     @apply flex flex-row;
+  }
+  .flex-r-center {
+    @apply flex flex-row justify-center items-center;
   }
   .flex-between-center {
     @apply flex justify-between items-center;
   }
   .max-w-container {
     @apply w-full max-w-[1520px] md:px-8 px-4 mx-auto;
+  }
+  .max-w-container-sm-full {
+    @apply w-full max-w-[1520px] md:px-8 mx-auto;
   }
 }
