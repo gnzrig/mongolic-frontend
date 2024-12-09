@@ -1,9 +1,8 @@
 "use client";
 
-import Commercial from "./commercial-link";
-import WatchShows from "./watch-shows";
+import DailyShows from "./daily-shows";
 
-const Browser = () => {
+const Daily = () => {
   return (
     <div>
       <div className="bg-[#26262699] w-[55vw] h-[120px] rounded-3xl flex">
@@ -32,11 +31,16 @@ const Browser = () => {
           </button>
         </div>
       </div>
-      <WatchShows />
-      <Commercial />
-      <WatchShows />
+      <div className="w-[55vw] h-[1px] bg-gradient-to-r from-white to-transparent mt-10"></div>
+      <DailyShows />
+      <div className="w-[55vw] h-[1px] bg-gradient-to-r from-white to-transparent mt-10"></div>
+      <DailyShows />
+      <div className="w-[55vw] h-[1px] bg-gradient-to-r from-white to-transparent mt-10"></div>
+      <DailyShows />
+      <div className="w-[55vw] h-[1px] bg-gradient-to-r from-white to-transparent mt-10"></div>
+      <DailyShows />
     </div>
   );
 };
 
-export default Browser;
+export default Daily;

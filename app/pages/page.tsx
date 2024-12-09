@@ -20,7 +20,9 @@ const Home = () => {
 
   useEffect(() => {
     const progressInterval = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 1
+      );
     }, 30);
 
     return () => clearInterval(progressInterval);
@@ -87,9 +89,17 @@ const Home = () => {
             <div className="relative w-full mx-auto">
               {/* Image container */}
               <div className="overflow-hidden w-full">
-                <div className="flex transition-transform duration-1000" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                <div
+                  className="flex transition-transform duration-1000"
+                  style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                >
                   {images.map((image, index) => (
-                    <img key={index} src={image} alt={`Image ${index + 1}`} className="w-full object-cover" />
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`Image ${index + 1}`}
+                      className="w-full object-cover"
+                    />
                   ))}
                 </div>
               </div>
@@ -97,7 +107,10 @@ const Home = () => {
               {/* Progress indicator */}
               <div className="flex justify-center space-x-2 mt-4">
                 {images.map((_, id) => (
-                  <div key={id} className="relative w-16 h-1 bg-gray-300 rounded overflow-hidden">
+                  <div
+                    key={id}
+                    className="relative w-16 h-1 bg-gray-300 rounded overflow-hidden"
+                  >
                     <div
                       className={`absolute top-0 left-0 h-full bg-gray-800 transition-all`}
                       style={{
@@ -110,12 +123,20 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full md:w-[31%]">
-            <h2 className="text-sm text-[#0d0d0d] font-semibold tracking-[2px] md:text-base">Top Stories</h2>
+            <h2 className="text-sm text-[#0d0d0d] font-semibold tracking-[2px] md:text-base">
+              Top Stories
+            </h2>
             <div className="flex-c pt-5 gap-3 md:gap-6">
               {stories.map((e, i) => (
                 <div key={i} className="flex-r justify-between md:gap-4">
-                  <span className="text-lg text-[#666666] md:text-[40px] md:font-thin md:mt-6">{i + 1}</span>
-                  <span className={`flex-c w-[91%] gap-2 md:flex-r md:gap-4 pb-3 md:pb-6 ${i !== 0 ? "border-b" : "md:border-b"} `}>
+                  <span className="text-lg text-[#666666] md:text-[40px] md:font-thin md:mt-6">
+                    {i + 1}
+                  </span>
+                  <span
+                    className={`flex-c w-[91%] gap-2 md:flex-r md:gap-4 pb-3 md:pb-6 ${
+                      i !== 0 ? "border-b" : "md:border-b"
+                    } `}
+                  >
                     <div className="flex-c gap-2 md:w-auto md:order-last">
                       <h3
                         className="text-[#0d0d0d] text-base font-bold truncate overflow-hidden line-clamp-2"
@@ -152,20 +173,33 @@ const Home = () => {
       <div className="w-full homeEpisoderBack py-12">
         <div className="max-w-container flex-c relative">
           <div className="flex-between-center text-[#f5f5f5] pb-5 md:pb-16">
-            <h2 className="uppercase text-sm font-semibold tracking-[2px] md:text-base">Latest Episodes</h2>
+            <h2 className="uppercase text-sm font-semibold tracking-[2px] md:text-base">
+              Latest Episodes
+            </h2>
             <Link
               href="/node_modules"
               className="uppercase flex-r-center gap-2 font-semibold text-xs tracking-[.48px] md:text-base md:tracking-[.64px]"
             >
               View All
-              <Image src="/icon/arrow.svg" width={24} height={24} alt="arrow icon" />
+              <Image
+                src="/icon/arrow.svg"
+                width={24}
+                height={24}
+                alt="arrow icon"
+              />
             </Link>
           </div>
           <div className="w-full relative md:py-10 text-black">
             <Slider ref={sliderRef} {...settings}>
               {episodes.map((e, i) => (
                 <div key={i} className="w-[346px] flex-c px-2">
-                  <Image className="w-full md:h-[190px]" src={e.image} width={227} height={127} alt="content image" />
+                  <Image
+                    className="w-full md:h-[190px]"
+                    src={e.image}
+                    width={227}
+                    height={127}
+                    alt="content image"
+                  />
                   <h3
                     className="text-white mt-6 text-sm truncate overflow-hidden line-clamp-1 font-semibold leading-[150%]  md:text-[20px] md:leading-[135%]"
                     style={{
@@ -187,10 +221,25 @@ const Home = () => {
               className="hidden md:flex rounded-full bg-black w-8 h-8 flex-center absolute top-0 bottom-0 my-auto left-4 rotate-180"
               onClick={previous}
             >
-              <Image className="" src="/icon/arrow-none-line.svg" width={24} height={24} alt="arrow icon" />
+              <Image
+                className=""
+                src="/icon/arrow-none-line.svg"
+                width={24}
+                height={24}
+                alt="arrow icon"
+              />
             </button>
-            <button className="hidden md:flex rounded-full bg-black w-8 h-8 flex-center absolute top-0 bottom-0 my-auto right-4" onClick={next}>
-              <Image className="" src="/icon/arrow-none-line.svg" width={24} height={24} alt="arrow icon" />
+            <button
+              className="hidden md:flex rounded-full bg-black w-8 h-8 flex-center absolute top-0 bottom-0 my-auto right-4"
+              onClick={next}
+            >
+              <Image
+                className=""
+                src="/icon/arrow-none-line.svg"
+                width={24}
+                height={24}
+                alt="arrow icon"
+              />
             </button>
           </div>
         </div>
@@ -198,17 +247,31 @@ const Home = () => {
       {/* content setion */}
       <div className="w-full homeContentBack pt-6 md:pt-[96px] pb-10">
         <div className="max-w-container flex-c">
-          <h2 className="uppercase text-sm font-semibold tracking-[2px] mb-12 text-center md:text-base text-[#0d0d0d]">Latest News</h2>
+          <h2 className="uppercase text-sm font-semibold tracking-[2px] mb-12 text-center md:text-base text-[#0d0d0d]">
+            Latest News
+          </h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 md:gap-4">
             {news.map((e, i) => (
               <div key={i} className="md:bg-white">
-                <News image={e.image} title={e.title} name={e.name} date={e.date} />
+                <News
+                  image={e.image}
+                  title={e.title}
+                  name={e.name}
+                  date={e.date}
+                />
               </div>
             ))}
           </div>
           <button className="flex-c justify-start items-center cursor-pointer h-[40px] mt-12">
-            <h3 className="uppercase text-[#666] font-bold text-center tracking-[1.5px] text-sm duration-300 pb-2 hover:pb-4">More stories</h3>
-            <Image src="/icon/arrow-black.svg" width={20} height={20} alt="icon" />
+            <h3 className="uppercase text-[#666] font-bold text-center tracking-[1.5px] text-sm duration-300 pb-2 hover:pb-4">
+              More stories
+            </h3>
+            <Image
+              src="/icon/arrow-black.svg"
+              width={20}
+              height={20}
+              alt="icon"
+            />
           </button>
         </div>
       </div>
@@ -228,21 +291,24 @@ const images = [
 
 const stories = [
   {
-    title: "Syria On Verge Of Collapse As Terrorist Rebels Take Over Vast Swaths Of Country",
+    title:
+      "Syria On Verge Of Collapse As Terrorist Rebels Take Over Vast Swaths Of Country",
     images:
       "https://dw-wp-production.imgix.net/2024/12/GettyImages-2188564512.jpg?ar=1%3A1&fit=crop&crop=faces&w=3840&auto=format&ixlib=react-9.3.0)",
     time: "17",
     name: "Ryan Saavedra",
   },
   {
-    title: "‘Hahahaha’: Kamala Campaign Account Deletes Post That Led To Tim Pool Defamation Suit",
+    title:
+      "‘Hahahaha’: Kamala Campaign Account Deletes Post That Led To Tim Pool Defamation Suit",
     images:
       "https://dw-wp-production.imgix.net/2024/11/GettyImages-2182616600.jpg?ar=1%3A1&fit=crop&crop=faces&w=3840&auto=format&ixlib=react-9.3.0)",
     time: "19hrs ago",
     name: "Brent Scher",
   },
   {
-    title: "Here’s Why The State Dropped Top Charge In Daniel Penny Case, And Why Defense Is Calling Foul",
+    title:
+      "Here’s Why The State Dropped Top Charge In Daniel Penny Case, And Why Defense Is Calling Foul",
     images:
       "https://dw-wp-production.imgix.net/2024/11/GettyImages-2181582532.jpg?ar=1%3A1&fit=crop&crop=faces&w=3840&auto=format&ixlib=react-9.3.0)",
     time: "19hrs ago",
@@ -267,37 +333,43 @@ const stories = [
 const episodes = [
   {
     title: "The Evolution of a Rockstar | Gene Simmons",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4deysa07who0894jg7y0wbm/cm4deysa07who0894jg7y0wbm-1733529937361.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4deysa07who0894jg7y0wbm/cm4deysa07who0894jg7y0wbm-1733529937361.jpg",
     name: "The Sunday Special",
     date: "Dec 8, 2024",
   },
   {
     title: "Miracles",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4bnan9iljni08786e1rjecn/cm4bnan9iljni08786e1rjecn-1733422995299.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4bnan9iljni08786e1rjecn/cm4bnan9iljni08786e1rjecn-1733422995299.jpg",
     name: "The Gospels",
     date: "Dec 8, 2024",
   },
   {
     title: "Hunter’s Big Pardon: Now With Extra Corruption!",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4dldiu31zvm0806ks67np5g/cm4dldiu31zvm0806ks67np5g-1733540702673.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4dldiu31zvm0806ks67np5g/cm4dldiu31zvm0806ks67np5g-1733540702673.jpg",
     name: "Ben After Dark",
     date: "Dec 8, 2024",
   },
   {
     title: "This Is What 'America Last' Looks Like",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4dinz0wgx8u0894byhxgv23/cm4dinz0wgx8u0894byhxgv23-1733536151354.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4dinz0wgx8u0894byhxgv23/cm4dinz0wgx8u0894byhxgv23-1733536151354.jpg",
     name: "The Comments Section with Brett Cooper",
     date: "Dec 8, 2024",
   },
   {
     title: "The Viral Debate Between American and Russian Men",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4dia6nhpxwc0894r7w86403/cm4dia6nhpxwc0894r7w86403-1733535508068.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4dia6nhpxwc0894r7w86403/cm4dia6nhpxwc0894r7w86403-1733535508068.jpg",
     name: "The Comments Section with Brett Cooper",
     date: "Dec 7, 2024",
   },
   {
     title: "Meghan Markle’s Public Image Takes Another Hit",
-    image: "https://daily-wire-production.imgix.net/episodes/cm4dhva00fmsb0826dc73j4so/cm4dhva00fmsb0826dc73j4so-1733534812577.jpg",
+    image:
+      "https://daily-wire-production.imgix.net/episodes/cm4dhva00fmsb0826dc73j4so/cm4dhva00fmsb0826dc73j4so-1733534812577.jpg",
     name: "The Comments Section with Brett Cooper",
     date: "Dec 7, 2024",
   },
@@ -340,7 +412,8 @@ const news = [
     date: "Dec 7, 2024",
   },
   {
-    title: "Eric Adams Says ‘Net Is Tightening’ On Man Who Assassinated Health Insurance CEO",
+    title:
+      "Eric Adams Says ‘Net Is Tightening’ On Man Who Assassinated Health Insurance CEO",
     image:
       "https://dw-wp-production.imgix.net/2024/12/GettyImages-2188229522-scaled-e1733600578804.jpg?ar=16%3A6&fit=crop&crop=faces&w=3840&auto=format&ixlib=react-9.3.0)",
     name: "By  Zach Jewell",
@@ -382,7 +455,8 @@ const news = [
     date: "Dec 7, 2024",
   },
   {
-    title: "Eric Adams Says ‘Net Is Tightening’ On Man Who Assassinated Health Insurance CEO",
+    title:
+      "Eric Adams Says ‘Net Is Tightening’ On Man Who Assassinated Health Insurance CEO",
     image:
       "https://dw-wp-production.imgix.net/2024/12/GettyImages-2188229522-scaled-e1733600578804.jpg?ar=16%3A6&fit=crop&crop=faces&w=3840&auto=format&ixlib=react-9.3.0)",
     name: "By  Zach Jewell",

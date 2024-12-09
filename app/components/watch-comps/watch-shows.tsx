@@ -7,71 +7,57 @@ const jsonData = [
     text: "Show 1",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdailywireplus-v2.imgix.net%2Fimages%2Fimage-overrides%2Fd92d0328-61a0-45ae-b77a-7685e274a26b.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 2",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdailywireplus-v2.imgix.net%2Fimages%2Fimage-overrides%2Fd0d49fc3-ebed-422e-9243-5402e6441c5b.jpg%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 3",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0a8bg6y30rf078602msy6qo-portraitImage-1711466848992.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 4",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdailywireplus-v2.imgix.net%2Fimages%2Fimage-overrides%2F07a7cf56-5eb8-4c6a-9be6-9452597649d6.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 5",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0gx918z008007947vwinup8-portraitImage-1693183187825.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 6",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0gxbu6w008j0738c7l411yq-portraitImage-1692587392879.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 1",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0gxadc0007v0738h8tw5eqb-portraitImage-1693880475448.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 2",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck05emr8s26p10786bcd0z048-portraitImage-1686330610196.jpg%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 3",
   },
   {
-    imageUrl: "",
+    imageUrl:
+      "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fcl7unwc3f2g0w0878detyx2r2-portraitImage-1704739990176.jpg%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
     text: "Show 4",
-  },
-  {
-    imageUrl: "",
-    text: "Show 5",
-  },
-  {
-    imageUrl: "",
-    text: "Show 6",
-  },
-  {
-    imageUrl: "",
-    text: "Show 4",
-  },
-  {
-    imageUrl: "",
-    text: "Show 5",
-  },
-  {
-    imageUrl: "",
-    text: "Show 6",
   },
 ];
 
 const WatchShows = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-10">
       {Array.from({ length: 3 }).map((_, rowIndex) => (
-        <div
-          key={rowIndex}
-          className="w-[55vw] h-[35vh] flex justify-between my-5 "
-        >
+        <div key={rowIndex} className="w-[55vw] flex justify-between my-5 ">
           {jsonData
             .slice(rowIndex * 5, (rowIndex + 1) * 5)
             .map((item, index) => (
