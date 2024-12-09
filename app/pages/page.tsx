@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
 import { useState, useEffect, useRef } from "react";
-import { space } from "postcss/lib/list";
 import { News } from "../components/News";
 
 const Home = () => {
@@ -199,6 +198,7 @@ const Home = () => {
                     width={227}
                     height={127}
                     alt="content image"
+                    unoptimized={true}
                   />
                   <h3
                     className="text-white mt-6 text-sm truncate overflow-hidden line-clamp-1 font-semibold leading-[150%]  md:text-[20px] md:leading-[135%]"

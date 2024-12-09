@@ -1,9 +1,9 @@
 "use client";
+import Image from "next/image";
 
 const jsonData = [
   {
-    imageUrl:
-      "https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png",
+    imageUrl: "https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png",
     text: "Show 1",
   },
   {
@@ -77,7 +77,9 @@ const WatchShows = () => {
                 </div>
                 <p className="text-[gray] mt-1 text-sm">{item.text}</p>
               </div>
-            ))}
+              <p className='text-[gray] mt-1 text-sm'>{item.text}</p>
+            </div>
+          ))}
         </div>
       ))}
     </div>
