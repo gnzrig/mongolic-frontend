@@ -9,7 +9,7 @@ const Browser = () => {
     <div>
       <div className="bg-[#26262699] w-[55vw] h-[120px] rounded-3xl flex">
         <div className="flex-[2] flex items-center justify-center">
-          <img
+          <Image
             src="https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png"
             alt="zurag-1"
             className="w-full h-full object-cover rounded-l-3xl"

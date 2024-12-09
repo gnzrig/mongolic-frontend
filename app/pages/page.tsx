@@ -93,7 +93,7 @@ const Home = () => {
                   style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                   {images.map((image, index) => (
-                    <img
+                    <Image
                       key={index}
                       src={image}
                       alt={`Image ${index + 1}`}

@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 const jsonData = [
   {
@@ -104,7 +105,7 @@ const DailyShows = () => {
                 }`}
               >
                 {item.imageUrl && item.imageUrl !== "" ? (
-                  <img
+                  <Image
                     src={item.imageUrl}
                     alt={item.text}
                     className="w-full h-full object-cover rounded-2xl"

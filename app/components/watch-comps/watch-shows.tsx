@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const jsonData = [
   {
-    imageUrl: "https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png",
+    imageUrl:
+      "https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png",
     text: "Show 1",
   },
   {
@@ -34,52 +35,52 @@ const jsonData = [
   {
     imageUrl:
       "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0gxbu6w008j0738c7l411yq-portraitImage-1692587392879.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
-    text: "Show 1",
+    text: "Show 7",
   },
   {
     imageUrl:
       "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck0gxadc0007v0738h8tw5eqb-portraitImage-1693880475448.png%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
-    text: "Show 2",
+    text: "Show 8",
   },
   {
     imageUrl:
       "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fck05emr8s26p10786bcd0z048-portraitImage-1686330610196.jpg%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
-    text: "Show 3",
+    text: "Show 9",
   },
   {
     imageUrl:
       "https://www.dailywire.com/_next/image?url=https%3A%2F%2Fdaily-wire-production.imgix.net%2Fshows%2Fcl7unwc3f2g0w0878detyx2r2-portraitImage-1704739990176.jpg%3Fauto%3Dcompress%26cs%3Dorigin&w=384&q=75",
-    text: "Show 4",
+    text: "Show 10",
   },
 ];
 
 const WatchShows = () => {
   return (
     <div className="flex flex-col mb-10">
-      {Array.from({ length: 3 }).map((_, rowIndex) => (
-        <div key={rowIndex} className="w-[55vw] flex justify-between my-5 ">
+      {Array.from({ length: 2 }).map((_, rowIndex) => (
+        <div key={rowIndex} className="w-[55vw] flex justify-between my-5">
           {jsonData
             .slice(rowIndex * 5, (rowIndex + 1) * 5)
             .map((item, index) => (
               <div key={index} className="text-center text-white">
                 <div
                   className={`w-[10vw] h-[35vh] rounded-2xl ${
-                    item.imageUrl && item.imageUrl !== "" ? "" : "bg-gray-500"
+                    item.imageUrl ? "" : "bg-gray-500"
                   }`}
                 >
-                  {item.imageUrl && item.imageUrl !== "" ? (
-                    <img
+                  {item.imageUrl && (
+                    <Image
                       src={item.imageUrl}
                       alt={item.text}
+                      width={150} // Adjust width to fit your design
+                      height={250} // Adjust height to fit your design
                       className="w-full h-full object-cover rounded-2xl"
                     />
-                  ) : null}
+                  )}
                 </div>
                 <p className="text-[gray] mt-1 text-sm">{item.text}</p>
               </div>
-              <p className='text-[gray] mt-1 text-sm'>{item.text}</p>
-            </div>
-          ))}
+            ))}
         </div>
       ))}
     </div>
