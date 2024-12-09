@@ -171,7 +171,14 @@ const Home = () => {
             <Slider ref={sliderRef} {...settings}>
               {episodes.map((e, i) => (
                 <div key={i} className='w-[346px] flex-c px-2'>
-                  <Image className='w-full md:h-[190px]' src={e.image} width={227} height={127} alt='content image' />
+                  <Image
+                    className='w-full md:h-[190px]'
+                    src={e.image}
+                    width={227}
+                    height={127}
+                    alt='content image'
+                    unoptimized
+                  />
                   <h3
                     className='text-white mt-6 text-sm truncate overflow-hidden line-clamp-1 font-semibold leading-[150%]  md:text-[20px] md:leading-[135%]'
                     style={{
