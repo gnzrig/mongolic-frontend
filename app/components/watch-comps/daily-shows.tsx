@@ -79,14 +79,14 @@ const DailyShows = () => {
       <div className="relative flex-col items-center my-10">
         <div className="flex justify-between mb-5">
           <h1 className="text-white text-2xl">The Ben Shapiro Show</h1>
-          <button className="text-bklack px-5 bg-white rounded-3xl font-semibold    ">
+          <button className="text-black px-5 bg-white rounded-3xl font-semibold">
             View All
           </button>
         </div>
 
         <div
           ref={scrollContainerRef}
-          className="w-[55vw] h-[20vh] flex overflow-x-scroll scrollbar-hidden space-x-5 flex items-center "
+          className="w-[55vw] h-[20vh] flex overflow-x-scroll scrollbar-hidden space-x-5 items-center"
         >
           {isScrollableLeft && (
             <button
@@ -100,7 +100,7 @@ const DailyShows = () => {
           {jsonData.map((item, index) => (
             <div key={index} className="flex-shrink-0 text-center text-white">
               <div
-                className={`w-[14vw] h-[16vh] rounded-2xl ${
+                className={`relative w-[14vw] h-[16vh] rounded-2xl ${
                   item.imageUrl && item.imageUrl !== "" ? "" : "bg-gray-500"
                 }`}
               >
@@ -108,7 +108,9 @@ const DailyShows = () => {
                   <Image
                     src={item.imageUrl}
                     alt={item.text}
-                    className="w-full h-full object-cover rounded-2xl"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl"
                   />
                 ) : null}
               </div>

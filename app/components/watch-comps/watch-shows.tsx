@@ -3,8 +3,7 @@ import Image from "next/image";
 
 const jsonData = [
   {
-    imageUrl:
-      "https://dailywireplus-v2.imgix.net/images/dailywire.com/16x9.png",
+    imageUrl: "",
     text: "Show 1",
   },
   {

@@ -23,7 +23,13 @@ export const Navbar = () => {
       {/* header */}
       <div className="headerBackground w-full h-[70px] flex items-center lg:h-[90px]">
         <div className="max-w-container headerBackground flex-between-center">
-          <Image className="md:w-[180px]" src="/logo.svg" alt="nav bar logo image" height={50} width={230} />
+          <Image
+            className="md:w-[180px]"
+            src="/logo.svg"
+            alt="nav bar logo image"
+            height={50}
+            width={230}
+          />
           <Image
             className="md:hidden cursor-pointer"
             src="/icon/header/hamburgerMenu.svg"
@@ -35,7 +41,10 @@ export const Navbar = () => {
           <div className="hidden md:flex md:w-full md:ml-20 md:justify-between md:items-center">
             <ul className="flex space-x-6 text-white font-medium md:text-[13px]">
               <li className="cursor-pointer">
-                <Link className={`${pathname === "/" && "border-b border-white"}`} href="/">
+                <Link
+                  className={`${pathname === "/" && "border-b border-white"}`}
+                  href="/"
+                >
                   Home
                 </Link>
               </li>
@@ -43,12 +52,17 @@ export const Navbar = () => {
                 <Link href="/">Listen</Link>
               </li>
               <li className="cursor-pointer">
-                <Link className={`${pathname === "/watch" && "border-b border-white"}`} href="/watch">
+                <Link
+                  className={`${
+                    pathname === "/watch" && "border-b border-white"
+                  }`}
+                  href="/watch"
+                >
                   Watch
                 </Link>
               </li>
               <li className="cursor-pointer">
-                <Link href="/">Discuss</Link>
+                <Link href="/discuss">Discuss</Link>
               </li>
               <li className="cursor-pointer">
                 <Link href="/">Shop</Link>
@@ -61,9 +75,18 @@ export const Navbar = () => {
               </li>
             </ul>
             <div className="hidden md:flex-r gap-3">
-              <Image alt="icon search" src="/icon/header/search.svg" width={20} height={20} />
-              <button className="py-2 px-4 text-xs text-white rounded-md">Login</button>
-              <button className="w-full py-[10px] px-6 bg-[#B33828] text-xs text-white rounded-md">Sign Up</button>
+              <Image
+                alt="icon search"
+                src="/icon/header/search.svg"
+                width={20}
+                height={20}
+              />
+              <button className="py-2 px-4 text-xs text-white rounded-md">
+                Login
+              </button>
+              <button className="w-full py-[10px] px-6 bg-[#B33828] text-xs text-white rounded-md">
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
@@ -76,10 +99,23 @@ export const Navbar = () => {
       >
         <div className="p-8 flex-between-center">
           <div>
-            <Image src="/logoDark.svg" alt="nav bar logo image" height={25} width={200} />
+            <Image
+              src="/logoDark.svg"
+              alt="nav bar logo image"
+              height={25}
+              width={200}
+            />
           </div>
-          <button onClick={toggleMenu} className="text-white text-xl opacity-40">
-            <Image src="/icon/close.svg" alt="nav bar logo image" height={20} width={20} />
+          <button
+            onClick={toggleMenu}
+            className="text-white text-xl opacity-40"
+          >
+            <Image
+              src="/icon/close.svg"
+              alt="nav bar logo image"
+              height={20}
+              width={20}
+            />
           </button>
         </div>
         <ul className="space-y-9 pt-3 px-8 pb-8 text-[20px] leading-[35px] font-bold">
@@ -108,8 +144,12 @@ export const Navbar = () => {
             <Link href="/">Search</Link>
           </li>
           <div className="flex-c gap-4">
-            <button className="w-full py-2 px-4 bg-black text-xs text-white rounded-md">Login</button>
-            <button className="w-full py-2 px-4 bg-[#B33828] text-xs text-white rounded-md">Sign Up</button>
+            <button className="w-full py-2 px-4 bg-black text-xs text-white rounded-md">
+              Login
+            </button>
+            <button className="w-full py-2 px-4 bg-[#B33828] text-xs text-white rounded-md">
+              Sign Up
+            </button>
           </div>
         </ul>
       </div>
