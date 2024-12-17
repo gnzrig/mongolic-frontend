@@ -75,4 +75,7 @@ body {
   .max-w-container-sm-full {
     @apply w-full max-w-[1520px] md:px-8 mx-auto;
   }
+  .max-w-detail-container {
+    @apply w-full max-w-[800px] md:px-8 px-4 mx-auto;
+  }
 }
